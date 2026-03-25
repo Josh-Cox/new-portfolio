@@ -1,6 +1,7 @@
 import "./globals.css";
 import Link from "next/link";
 import { Inter, JetBrains_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
@@ -46,6 +47,7 @@ export default function RootLayout({
         <footer className="border-t border-white/10 text-center py-6 text-sm text-ink/70">
           © {new Date().getFullYear()} Josh Cox
         </footer>
+        <Analytics />
       </body>
     </html>
   );
